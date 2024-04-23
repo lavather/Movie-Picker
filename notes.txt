@@ -1,0 +1,49 @@
+two sites
+- index.html
+- watchlist.html
+
+index.html connects to the api and displays search results
+=> button "add to watchlist" => save to local storage (maybe to firebase?)
+
+watchlist.html grabs and loads from localstorage / firebase
+
+
+prep:
+
+api documentation link
+refresher on local storage
+best practice for accessible html (labels, aria etc)
+
+
+walkthrough:
+
+- basic html and css design
+- connect to api
+- hand over content of search bar to api
+- display results
+- make add button add IDs etc (?) to watchlist Array
+(maybe use object, so for easier delete by id later)
+
+- watchlist grab local storage Array
+- connect to api and display contents on website
+- remove button removes entry by id?
+
+    async function getSearch(x) {
+        const response = await fetch(`http://www.omdbapi.com/?s=${x}&apikey=${apiKey}`);
+        const data = await response.json();
+        
+        console.log(data);
+        
+        const eintrag = data.Search;
+        const promises = eintrag.map(async function(entry) {
+            arrayImdb.push(entry.imdbID);
+            
+            const movieResponse = await fetch(`http://www.omdbapi.com/?t=${entry.imdbID}&apikey=${apiKey}`);
+            const movieData = await movieResponse.json();
+            
+            return movieData;
+        });
+        
+        const movieDetails = await Promise.all(promises);
+        console.log(movieDetails);
+    }
