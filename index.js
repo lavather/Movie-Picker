@@ -35,11 +35,11 @@ function handleSearch() {
 } 
 
 async function getSearch(x) {
-    const response = await fetch(`http://www.omdbapi.com/?s=${x}&page=${pageCounter}&apikey=${apiKey}`);
+    const response = await fetch(`https://www.omdbapi.com/?s=${x}&page=${pageCounter}&apikey=${apiKey}`);
     const data = await response.json();    
     const eintrag = data.Search;
     const promises = eintrag.map(async function(entry) {           
-        const movieResponse = await fetch(`http://www.omdbapi.com/?i=${entry.imdbID}&plot=full&apikey=${apiKey}`);
+        const movieResponse = await fetch(`https://www.omdbapi.com/?i=${entry.imdbID}&plot=full&apikey=${apiKey}`);
         const movieData = await movieResponse.json();
         return movieData;
     });
