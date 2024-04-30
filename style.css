@@ -47,6 +47,7 @@ h3:hover{
 
 .search-bar {
   display: flex;
+  align-items:center;
   justify-content: center;
   background-color: #f0f0f0;
   border: 1px solid grey;
@@ -70,6 +71,7 @@ h3:hover{
 }
   
 .search-field {
+
   min-width: 100px;
   border: none;
   background: transparent;
@@ -195,7 +197,7 @@ button{
 
   h3{
     font-size:10px;
-    top:38%;
+    top:40%;
   }
   .search-button {
     line-height: 18px; /* Adjusted line-height */
@@ -207,7 +209,11 @@ button{
   }
 
   .faded-image{
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  }
+
+  .search-icon {
+    margin-left: 20px;
   }
 
 }
