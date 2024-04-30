@@ -188,15 +188,15 @@ button{
   pointer-events: none; /* This ensures that the tooltip doesn't interfere with mouse events */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 780px) {
   h1{
-    font-size:1.5em;
+    font-size:2em;
     position:absolute;
-    top:33%;
+    top:34%;
   }
 
   h3{
-    font-size:10px;
+    font-size:16px;
     top:40%;
   }
   .search-button {
@@ -216,9 +216,40 @@ button{
     margin-left: 20px;
   }
 
+
+
 }
 
 
-@media only screen and (min-width: 769px) {
-  /* Your CSS styles for PC users */
+@media only screen and (max-width: 480px) {
+  h1{
+    font-size:1.5em;
+    position:absolute;
+    top:34%;
+  }
+
+  h3{
+    font-size:10px;
+    top:40%;
+  }
+  .search-button {
+    line-height: 18px; /* Adjusted line-height */
+    width:60px;
+  } 
+
+  .search-bar {
+    height: 20px; /* Adjust the height as needed */
+  }
+
+  .faded-image{
+  background-repeat: no-repeat;
+  }
+
 }
+
+@media only screen and (max-width:400px){
+  .search-icon {
+    margin-left: 45px;
+  }
+}
+
