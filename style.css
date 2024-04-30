@@ -59,6 +59,7 @@ h3:hover{
   left:0;
   right:0;
   margin:0 auto;
+ 
 }
   
 .search-icon {
@@ -216,8 +217,6 @@ button{
     margin-left: 20px;
   }
 
-
-
 }
 
 
@@ -251,5 +250,6 @@ button{
   .search-icon {
     margin-left: 45px;
   }
+
 }
 
