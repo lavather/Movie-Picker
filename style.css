@@ -37,6 +37,7 @@ h3{
   right:15%;
   font-weight:normal;
   transition: all 0.3s;
+  cursor:pointer;
 }
 
 h3:hover{
@@ -48,58 +49,55 @@ h3:hover{
 .search-bar {
   display: flex;
   align-items:center;
-  justify-content: center;
   background-color: #f0f0f0;
   border: 1px solid grey;
   border-radius: 5px;
   height: 32px; /* Adjust the height as needed */
-  width:40vw;
-  position:absolute;
-  top:95%;
-  left:0;
-  right:0;
+  width:600px;
   margin:0 auto;
- 
+  overflow:hidden;
+  margin-top:-18px;
+  position:relative;
+  z-index:999;
 }
   
 .search-icon {
-  margin-right: 5px;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  flex: 1; /* Allows search-icon to take up remaining space */
 }
-  
+
 .search-icon i {
   color: #666;
+  margin-right: 5px;
+  margin-left:10px;
 }
   
 .search-field {
-
-  min-width: 100px;
   border: none;
   background: transparent;
   outline: none;
   font-size: 16px;
-  padding: 10px 5px; /* Adjusted padding */
-  border-radius: 5px 0 0 5px;
   line-height: 20px; /* Adjusted line-height */
+  width:80%;
 }
   
 .search-button {
-  background-color: #e2e3e7;
-  color: #fff;
-  border-left: 1px solid rgb(193, 192, 192);
-  border-right:none;
-  border-top:none;
-  border-bottom:none;
+  width:30%;
+  height: 100%; /* Matches height of .search-bar */
+  background-color: #cfcbcb; /* Matches .search-bar background */
+  color: #0e0d0d;
+  border: none;
   cursor: pointer;
-  line-height: 30px; /* Adjusted line-height */
-  border-radius: 0 5px 5px 0;
-  width:100px;
-  color:rgb(34, 33, 33);
-  font-weight:bold;
-} 
+  padding: 0 10px;
+  border-left: 1px solid grey; /* Adds dividing line */
+  border-radius: 0 5px 5px 0; /* Rounds right side to match .search-bar */
+}
 
 .watchlist-btn{
   height:20px;
+  position:relative;
+  z-index:2;
 }
 
 .results{
